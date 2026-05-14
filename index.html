@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lutinha</title>
+<meta charset="UTF-8">
+<title>Arena RPG JavaScript</title>
+<link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <center>
-        <h1 class="titulo_principal">Jogo de Combate</h1>
-        <br>
-        <h2>No jogo existem 3 classes de heróis: Guerreiro, Mago e Arqueiro. Escolha a classe que você quer.</h2>
-        <br>
-        
-        <label for="herois">Escolha um herói:</label>
-        <select id="herois" name="herois">
-            <option value="Guerreiro">Guerreiro</option>
-            <option value="Mago">Mago</option>
-            <option value="Arqueiro">Arqueiro</option>
-        </select>
-        <br><br>
-        
-        <h3>Escolha sua arma:</h3>
-        
-        <input type="radio" id="espada" name="arma" value="espada">
-        <label for="espada">Espada</label>
-        <br>
-        
-        <input type="radio" id="cajado" name="arma" value="cajado">
-        <label for="cajado">Cajado</label>
-        <br>
-        
-        <input type="radio" id="arco" name="arma" value="arco">
-        <label for="arco">Arco</label>
-    </center>
-    
 
-    
+<div class="arena">
+<h2>⚔️ ARENA DOM ⚔️</h2>
+
+<div class="controles">
+<label>Escolha sua Classe:</label>
+<select id="classe">
+<option value="Guerreiro">Guerreiro</option>
+<option value="Mago">Mago</option>
+<option value="Arqueiro">Arqueiro</option>
+</select>
+
+<label>Equipe sua Arma:</label>
+<input type="text" id="arma" placeholder="Ex: Espada, Cajado, Arco...">
+
+<button onclick="lutar()">INICIAR COMBATE!</button>
+</div>
+
+<div id="log">Aguardando desafiante...</div>
+</div>
+
+<script src="./batalha.js"></script>
+
 </body>
 </html>
