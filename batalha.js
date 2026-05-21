@@ -15,21 +15,34 @@ function lutar(){
         case "guerreiro":
         if(arma.toLowerCase() === "espada" && dado >5){
             resultado += "<span class='sucesso'> SUCESSO: Você decapitou o inimigo.</span>"
-        }else if(dado > 15){
+            log.innerHTML = resultado;
+        }else if(dado > 12){
             resultado += "<span class='sucesso'> VITÓRIA: Você farmou muita aura.</span>"
+            log.innerHTML = resultado;
         }else{
             resultado += "<span class='derrota'> DERROTA: Monstro farmou mais aura que você ;-;</span>"
+            log.innerHTML = resultado;
         }
         break;
         case "mago":
         if(arma.toLowerCase() === "cajado" && dado >8){
-            resultado += "<span class='sucesso> SUCESSO: Você transformou o inimigo num slime.</span>"
-        }else if (dado = 20){
+            resultado += "<span class='sucesso'> SUCESSO: Você transformou o inimigo num slime.</span>"
+            log.innerHTML = resultado;
+        }else if (dado === 20){
             resultado += "<span class='critico'> SUCESSO: Você meteu um ataque crítico forte dms.</span>"
+            log.innerHTML = resultado;
         }else{
             resultado += "<span class='derrota'> DERROTA: Você foi mlk ;-;.</span>"
-        }
+            log.innerHTML = resultado;
+        }break;
         case "arqueiro":
+        if(arma.toLowerCase() === "arco" && dado > 10){
+            resultado += "<span class='vitoria'> SUCESSO: Você cagou demais em pegar dado maior que 10.</span>"
+            log.innerHTML = resultado;
+        }else{
+            resultado += "<span class='derrota'> DERROTA: Perdeu mano. F.</span>"
+            log.innerHTML = resultado;
+        }break;
 
     }
 }
