@@ -37,12 +37,16 @@ function lutar(){
         }break;
         case "arqueiro":
         if(arma.toLowerCase() === "arco" && dado > 10){
-            resultado += "<span class='vitoria'> SUCESSO: Você cagou demais em pegar dado maior que 10.</span>"
+            resultado += "<span class='vitoria'> SUCESSO: Você acertou a flecha bem na cara do inimigo.</span>"
             log.innerHTML = resultado;
         }else{
-            resultado += "<span class='derrota'> DERROTA: Perdeu mano. F.</span>"
+            resultado += "<span class='derrota'> DERROTA: O inimigo desviou da flecha </span>"
             log.innerHTML = resultado;
         }break;
 
+        default:
+            resultado += "Você ficou paralisado de medo";
+
     }
+    log.innerHTML = resultado;
 }
